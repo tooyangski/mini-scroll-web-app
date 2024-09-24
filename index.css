@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-transparency: 0.85;
+}
+
+html,
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  background: linear-gradient(45deg, #ff0000, #ff1aec);
+  color: white;
+  padding: 0.8em;
+  margin-bottom: 3em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header.transparent {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, var(--header-transparency)),
+    rgba(255, 26, 236, var(--header-transparency))
+  );
+}
+
+.header .menu a {
+  color: white;
+}
+
+.header .menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.header .menu a:hover {
+  color: #f00;
+}
+
+.section {
+  margin: 2em 0;
+}
+
+.section h2 {
+  margin-bottom: 1.2em;
+  text-align: center;
+  background: linear-gradient(45deg, #ff0000, #ff1aec);
+  color: white;
+}
+
+.section#home {
+  margin-bottom: 6.25em;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100vw;
+    padding: 0 2em;
+  }
+
+  .header .menu ul {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5em;
+  }
+
+  .header {
+    margin-bottom: 2em;
+  }
+}
